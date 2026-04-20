@@ -5,11 +5,8 @@ import { defineConfig } from "eslint/config";
 export default defineConfig([
   {
     ignores: [
-      "**/*.ejs",
-      "data/**",
       "node_modules/**",
       "public/**",
-      "uploads/**",
     ],
   },
   js.configs.recommended,
