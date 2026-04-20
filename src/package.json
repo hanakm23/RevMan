@@ -1,0 +1,41 @@
+{
+  "name": "revman",
+  "version": "1.0.0",
+  "description": "Jednoduchá hra ve stylu pac-mana, kdy hráči hrají za duchy.",
+  "keywords": [
+    "express",
+    "nodejs",
+    "website"
+  ],
+  "homepage": "https://github.com/hanakm23/RevMan#readme",
+  "bugs": {
+    "url": "https://github.com/hanakm23/RevMan/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hanakm23/RevMan.git"
+  },
+  "license": "MIT",
+  "author": "Pavel Učený <ucenyp23@spstrutnov.cz>, Matěj Hanák <hanakm23@spstrutnov.cz>, Vojtěch Synáč <synacv23@spstrutnov.cz>",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon --watch . --ext js,ejs,json server.js",
+    "format": "prettier --write .",
+    "lint": "eslint .",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "latest"
+  },
+  "devDependencies": {
+    "@eslint/js": "latest",
+    "eslint": "latest",
+    "globals": "latest",
+    "nodemon": "latest",
+    "prettier": "latest"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
