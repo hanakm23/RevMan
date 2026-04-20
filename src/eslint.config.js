@@ -4,10 +4,7 @@ import { defineConfig } from "eslint/config";
 
 export default defineConfig([
   {
-    ignores: [
-      "node_modules/**",
-      "public/**",
-    ],
+    ignores: ["node_modules/**", "public/**"],
   },
   js.configs.recommended,
   {
