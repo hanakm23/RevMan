@@ -98,10 +98,30 @@ const FRIGHTENED_SPEED = 4;
 
 // Key mappings for each player
 const keyBindings = {
-  player1: { ArrowUp: { x: 0, y: -1 }, ArrowDown: { x: 0, y: 1 }, ArrowLeft: { x: -1, y: 0 }, ArrowRight: { x: 1, y: 0 } },
-  player2: { w: { x: 0, y: -1 }, s: { x: 0, y: 1 }, a: { x: -1, y: 0 }, d: { x: 1, y: 0 } },
-  player3: { i: { x: 0, y: -1 }, k: { x: 0, y: 1 }, j: { x: -1, y: 0 }, l: { x: 1, y: 0 } },
-  player4: { "5": { x: 0, y: -1 }, "2": { x: 0, y: 1 }, "4": { x: -1, y: 0 }, "6": { x: 1, y: 0 } },
+  player1: {
+    ArrowUp: { x: 0, y: -1 },
+    ArrowDown: { x: 0, y: 1 },
+    ArrowLeft: { x: -1, y: 0 },
+    ArrowRight: { x: 1, y: 0 },
+  },
+  player2: {
+    w: { x: 0, y: -1 },
+    s: { x: 0, y: 1 },
+    a: { x: -1, y: 0 },
+    d: { x: 1, y: 0 },
+  },
+  player3: {
+    i: { x: 0, y: -1 },
+    k: { x: 0, y: 1 },
+    j: { x: -1, y: 0 },
+    l: { x: 1, y: 0 },
+  },
+  player4: {
+    5: { x: 0, y: -1 },
+    2: { x: 0, y: 1 },
+    4: { x: -1, y: 0 },
+    6: { x: 1, y: 0 },
+  },
 };
 
 window.addEventListener("keydown", (e) => {
@@ -376,7 +396,11 @@ function draw() {
     ctx.textAlign = "center";
     ctx.fillText("GAME OVER", canvas.width / 2, canvas.height / 2);
     ctx.font = "16px Arial";
-    ctx.fillText(`Final Score: ${score}`, canvas.width / 2, canvas.height / 2 + 40);
+    ctx.fillText(
+      `Final Score: ${score}`,
+      canvas.width / 2,
+      canvas.height / 2 + 40,
+    );
   }
 }
 
