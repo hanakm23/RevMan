@@ -2,11 +2,93 @@
 <html lang="cs">
   <head>
     <meta charset="UTF-8" />
-    <title>RevMan</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RevMan - Multiplayer Ghost Game</title>
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
   </head>
   <body>
-    <canvas id="game"></canvas>
+    <div class="container">
+      <header>
+        <h1>RevMan</h1>
+        <p class="subtitle">1-4 Player Ghost Chase Game</p>
+      </header>
+
+      <main>
+        <div class="game-wrapper">
+          <canvas id="game" aria-label="Game canvas"></canvas>
+        </div>
+
+        <aside class="controls-panel">
+          <section class="controls-section">
+            <h2>Controls</h2>
+            <div class="player-controls">
+              <div class="player-control">
+                <strong>Player 1:</strong>
+                <div class="keys">
+                  <kbd>↑</kbd> <kbd>↓</kbd> <kbd>←</kbd> <kbd>→</kbd>
+                </div>
+              </div>
+              <div class="player-control">
+                <strong>Player 2:</strong>
+                <div class="keys">
+                  <kbd>W</kbd> <kbd>S</kbd> <kbd>A</kbd> <kbd>D</kbd>
+                </div>
+              </div>
+              <div class="player-control">
+                <strong>Player 3:</strong>
+                <div class="keys">
+                  <kbd>I</kbd> <kbd>K</kbd> <kbd>J</kbd> <kbd>L</kbd>
+                </div>
+              </div>
+              <div class="player-control">
+                <strong>Player 4:</strong>
+                <div class="keys">
+                  <kbd>5</kbd> <kbd>2</kbd> <kbd>4</kbd> <kbd>6</kbd>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="controls-section">
+            <h2>How to Play</h2>
+            <ul class="instructions">
+              <li>Press <strong>1-4</strong> to toggle players on/off</li>
+              <li>Inactive players are controlled by AI</li>
+              <li>Collect pellets for <strong>10 points</strong></li>
+              <li>Collect power pellets for <strong>50 points</strong></li>
+              <li>Chase opposing ghosts when they're blue</li>
+              <li>Avoid other ghosts in normal mode</li>
+            </ul>
+          </section>
+
+          <section class="controls-section">
+            <h2>Game Info</h2>
+            <div class="info-grid">
+              <div class="info-item">
+                <span class="ghost-color red"></span>
+                <span>Blinky (Red)</span>
+              </div>
+              <div class="info-item">
+                <span class="ghost-color pink"></span>
+                <span>Pinky (Pink)</span>
+              </div>
+              <div class="info-item">
+                <span class="ghost-color cyan"></span>
+                <span>Inky (Cyan)</span>
+              </div>
+              <div class="info-item">
+                <span class="ghost-color orange"></span>
+                <span>Clyde (Orange)</span>
+              </div>
+            </div>
+          </section>
+        </aside>
+      </main>
+
+      <footer>
+        <p>&copy; 2026 RevMan Game. Local multiplayer fun!</p>
+      </footer>
+    </div>
   </body>
 </html>
