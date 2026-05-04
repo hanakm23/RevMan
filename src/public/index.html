@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="cs">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -31,9 +31,24 @@
             <p id="countdown"></p>
           </div>
           <canvas id="game" aria-label="Game canvas"></canvas>
+          <div id="game-over" class="game-over-modal" style="display: none;">
+            <div class="game-over-content">
+              <h2>Game Over!</h2>
+              <p>Final Score: <span id="final-score">0</span></p>
+              <button id="restart-btn">Play Again</button>
+            </div>
+          </div>
         </div>
 
         <aside class="controls-panel">
+          <section class="controls-section">
+            <h2>Score</h2>
+            <div class="score-display">
+              <p>Current: <strong id="score-display">0</strong></p>
+              <p>Active Players: <strong id="active-players">1</strong></p>
+            </div>
+          </section>
+
           <section class="controls-section">
             <h2>Controls</h2>
             <div class="player-controls">
@@ -67,17 +82,18 @@
           <section class="controls-section">
             <h2>How to Play</h2>
             <ul class="instructions">
-              <li>Press <strong>1-4</strong> to toggle players on/off</li>
+              <li>Use arrow keys, WASD, IJKL, or numpad to move</li>
               <li>Inactive players are controlled by AI</li>
               <li>Collect pellets for <strong>10 points</strong></li>
               <li>Collect power pellets for <strong>50 points</strong></li>
-              <li>Chase opposing ghosts when they're blue</li>
+              <li>Chase opposing ghosts when they're <span style="color: blue;">blue</span></li>
               <li>Avoid other ghosts in normal mode</li>
+              <li>Collect all pellets to win!</li>
             </ul>
           </section>
 
           <section class="controls-section">
-            <h2>Game Info</h2>
+            <h2>Ghost Info</h2>
             <div class="info-grid">
               <div class="info-item">
                 <span class="ghost-color red"></span>
